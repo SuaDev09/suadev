@@ -1,0 +1,21 @@
+<div
+  class="border-1 w-64 bg-surface-50 border-gray-200 dark:bg-surface-800 dark:border-gray-700 h-full rounded-lg flex flex-col gap-3 p-3 transition-all duration-200 ease-in-out"
+>
+  <span class="font-bold">Settings</span>
+  <div>
+    <ul class="flex flex-col gap-2">
+      @for(item of items; track item){
+      <li>
+        <a
+          [routerLink]="item.routerLink"
+          [routerLinkActive]="'bg-surface-200 dark:bg-surface-700'"
+          class="h-8 flex items-center gap-2 p-2 rounded-lg hover:bg-surface-200 dark:hover:bg-surface-700 font-medium"
+        >
+          <i [class]="item.icon"></i>
+          {{ item.label }}
+        </a>
+      </li>
+      }
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<div
+  class="bg-base-100 h-full rounded-lg flex flex-col justify-between p-3 transition-all duration-75 ease-in-out"
+  [ngClass]="hasExpanded ? 'w-64' : 'w-16'"
+  [attr.data-cy]="hasExpanded ? 'sidebar-opened' : 'sidebar-closed'"
+>
+  <div>
+    <div
+      class="flex gap-2 mb-3"
+      [ngClass]="hasExpanded ? '' : 'justify-center'"
+    >
+      <button
+        class="flex items-center gap-2 p-2 rounded-lg hover:bg-base-200 font-medium"
+        (click)="sidebarToggle()"
+        data-cy="sidebar-toggle"
+      >
+        <i
+          [class]="
+            hasExpanded ? 'pi pi-angle-double-left' : 'pi pi-angle-double-right'
+          "
+        ></i>
+      </button>
+    </div>
+    <ul class="flex flex-col gap-2">
+      @for(item of items; track item){
+      <li
+        class="w-full flex flex-row"
+        [ngClass]="hasExpanded ? '' : 'justify-center'"
+      >
+        <a
+          [routerLink]="item.routerLink"
+          [routerLinkActive]="'bg-surface-200 '"
+          class="w-full h-8 flex items-center gap-2 p-2 rounded-lg hover:bg-base-200 font-medium"
+          [ngClass]="
+            hasExpanded ? '' : 'w-8 tooltip tooltip-right justify-center'
+          "
+          [attr.data-tip]="item.label"
+        >
+          <i [class]="item.icon"></i>
+          @if(hasExpanded){
+          {{ item.label }}
+          }
+        </a>
+      </li>
+      }
+    </ul>
+  </div>
+  <div class="flex flex-col gap-2">
+    <button
+      class="w-full h-8 flex flex-row items-center gap-2 p-2 rounded-lg hover:bg-base-200 dark:hover:bg-surface-700 font-medium"
+      [ngClass]="hasExpanded ? '' : 'w-8 tooltip tooltip-right justify-center'"
+      [attr.data-tip]="'Sign Out'"
+      (click)="logOut()"
+    >
+      <i class="pi pi-sign-out"></i>
+      @if(hasExpanded){ Sign Out }
+    </button>
+    <div
+      class="flex w-full h-12 items-center gap-2 rounded-lg"
+      [ngClass]="hasExpanded ? '' : 'justify-center'"
+    >
+      <img
+        width="25"
+        height="25"
+        [src]="user.photo"
+        alt="Image"
+        (error)="imgError($event)"
+      />
+
+      @if(hasExpanded){
+      <div>
+        <div class="font-medium">{{ user.name || "User not found" }}</div>
+        <div class="text-xs text-gray-500">
+          {{ user.role || "Role not found" }}
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

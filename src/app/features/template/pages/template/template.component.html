@@ -1,0 +1,30 @@
+<div class="w-full h-full flex flex-col gap-3">
+  <div class="flex flex-row flex-wrap gap-3 lg:flex-nowrap justify-between">
+    <div class="w-full min-h-64 card bg-base-100">
+      <div class="card-body">
+        @if(chartData&&chartData.length > 0){
+
+        <app-chart
+          [chartId]="chartData[0].chartName"
+          [chartData]="chartData[0]"
+        />
+        }
+      </div>
+    </div>
+    <div class="w-full min-h-64 card bg-base-100">
+      <div class="card-body">
+        @if(chartData&& chartData.length > 0){
+        <app-chart
+          [chartId]="chartData[1].chartName"
+          [chartData]="chartData[1]"
+        />
+        }
+      </div>
+    </div>
+  </div>
+  <div class="w-full card bg-base-100">
+    <div class="card-body">
+      <app-table />
+    </div>
+  </div>
+</div>

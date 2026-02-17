@@ -1,0 +1,100 @@
+::ng-deep .p-datatable-table {
+  border-spacing: 0px var(--gap-sm) !important;
+}
+
+::ng-deep .p-datatable .p-datatable-header {
+  background: none;
+  border: none;
+}
+
+.header-table > th {
+  background: none;
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+.row-expanded {
+  > td {
+    transition: all 0.2s;
+
+    background: var(--p-surface-100);
+    border: none;
+    border-radius: var(--border-radius);
+  }
+}
+
+::ng-deep .p-datatable .p-paginator-bottom {
+  border: none !important;
+}
+
+.row-expanded-data {
+  transition: background-color 0.3s ease-in-out;
+  > td {
+    font-weight: bold;
+    border: none;
+    transition: all 1s;
+    background: var(--bg-color-primary);
+
+    &:first-child {
+      border-radius: var(--border-radius) 0 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 var(--border-radius) 0 0;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      gap: var(--gap-sm);
+    }
+  }
+}
+
+.row-data:hover,
+.row-expanded-data:hover {
+  > td {
+    background-color: var(--color-base-300);
+  }
+  cursor: pointer;
+}
+
+/* :host-context(.p-dark-mode) .row-data > td {
+  background: var(--bg-color-dark);
+} */
+
+.row-data {
+  > td {
+    transition: all 0.4s;
+    border: none;
+    background: var(--color-base-100);
+
+    /* cambia el color de los headers rows*/
+    /*background-color: blue;*/
+
+    &:first-child {
+      border-radius: var(--border-radius) 0 0 var(--border-radius);
+    }
+
+    &:last-child {
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      gap: var(--gap-sm);
+    }
+  }
+}
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--gap-sm);
+}

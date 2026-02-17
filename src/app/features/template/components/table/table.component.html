@@ -1,0 +1,39 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Type</th>
+      <th>Volume 1</th>
+      <th>Volume 1</th>
+      <th>Volume 1</th>
+      <th>Volume 1</th>
+      <th>Volume 1</th>
+      <th>Volume 1</th>
+      <th>Volume 1</th>
+      <th>Volume 1</th>
+      <th>Volume 1</th>
+      <th>Volume 1</th>
+      <th>Volume 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(product of data; track product){
+
+    <tr class="row-data">
+      <td>{{ product.ProductName }}</td>
+      <td>{{ product.Value }}</td>
+      <td>{{ product.Value }}</td>
+      <td>{{ product.Value }}</td>
+      <td>{{ product.Value }}</td>
+      <td>{{ product.Value }}</td>
+      <td>{{ product.Value }}</td>
+      <td>{{ product.Value }}</td>
+      <td>{{ product.Value }}</td>
+      <td>{{ product.Value }}</td>
+      <td>{{ product.Value }}</td>
+      <td>{{ product.Value }}</td>
+      <td>{{ product.Value }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
