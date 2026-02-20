@@ -28,6 +28,11 @@ export class SidebarComponent {
       label: 'Settings',
       routerLink: '/settings',
     },
+    {
+      icon: 'pi pi-home',
+      label: 'Home',
+      routerLink: '/home',
+    },
   ];
 
   ngOnInit() {

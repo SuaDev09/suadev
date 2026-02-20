@@ -1,0 +1,4 @@
+/* Puedes agregar estilos personalizados aquí o usar Tailwind en angular.json */
+:host {
+  display: block;
+}

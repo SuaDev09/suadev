@@ -21,26 +21,26 @@
       </button>
     </div>
     <ul class="flex flex-col gap-2">
-      @for(item of items; track item){
-      <li
-        class="w-full flex flex-row"
-        [ngClass]="hasExpanded ? '' : 'justify-center'"
-      >
-        <a
-          [routerLink]="item.routerLink"
-          [routerLinkActive]="'bg-surface-200 '"
-          class="w-full h-8 flex items-center gap-2 p-2 rounded-lg hover:bg-base-200 font-medium"
-          [ngClass]="
-            hasExpanded ? '' : 'w-8 tooltip tooltip-right justify-center'
-          "
-          [attr.data-tip]="item.label"
+      @for (item of items; track item) {
+        <li
+          class="w-full flex flex-row"
+          [ngClass]="hasExpanded ? '' : 'justify-center'"
         >
-          <i [class]="item.icon"></i>
-          @if(hasExpanded){
-          {{ item.label }}
-          }
-        </a>
-      </li>
+          <a
+            [routerLink]="item.routerLink"
+            [routerLinkActive]="'bg-surface-200 '"
+            class="w-full h-8 flex items-center gap-2 p-2 rounded-lg hover:bg-base-200 font-medium"
+            [ngClass]="
+              hasExpanded ? '' : 'w-8 tooltip tooltip-right justify-center'
+            "
+            [attr.data-tip]="item.label"
+          >
+            <i [class]="item.icon"></i>
+            @if (hasExpanded) {
+              {{ item.label }}
+            }
+          </a>
+        </li>
       }
     </ul>
   </div>
@@ -52,7 +52,9 @@
       (click)="logOut()"
     >
       <i class="pi pi-sign-out"></i>
-      @if(hasExpanded){ Sign Out }
+      @if (hasExpanded) {
+        Sign Out
+      }
     </button>
     <div
       class="flex w-full h-12 items-center gap-2 rounded-lg"
@@ -66,13 +68,13 @@
         (error)="imgError($event)"
       />
 
-      @if(hasExpanded){
-      <div>
-        <div class="font-medium">{{ user.name || "User not found" }}</div>
-        <div class="text-xs text-gray-500">
-          {{ user.role || "Role not found" }}
+      @if (hasExpanded) {
+        <div>
+          <div class="font-medium">{{ user.name || "User not found" }}</div>
+          <div class="text-xs text-gray-500">
+            {{ user.role || "Role not found" }}
+          </div>
         </div>
-      </div>
       }
     </div>
   </div>

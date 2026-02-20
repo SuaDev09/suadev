@@ -11,7 +11,15 @@ export const routes: Routes = [
     pathMatch: 'full',
     loadChildren: () =>
       import('./features/template/template.routes').then(
-        (m) => m.templateRoutes
+        (m) => m.templateRoutes,
+      ),
+  },
+  {
+    path: 'home',
+    pathMatch: 'full',
+    loadChildren: () =>
+      import('./features/landing-page/landing-page.routes').then(
+        (m) => m.landingPageRoutes,
       ),
   },
   {
@@ -19,14 +27,14 @@ export const routes: Routes = [
     pathMatch: 'full',
     loadChildren: () =>
       import('./features/settings/settings.routes').then(
-        (m) => m.settingsRoutes
+        (m) => m.settingsRoutes,
       ),
   },
   {
     path: '***',
     loadComponent: () =>
       import('../app/features/page-not-found/page-not-found.component').then(
-        (m) => m.PageNotFoundComponent
+        (m) => m.PageNotFoundComponent,
       ),
   },
 ];
