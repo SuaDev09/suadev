@@ -1,30 +1,26 @@
-import { Component } from '@angular/core';
-
-import { NgIcon, provideIcons } from '@ng-icons/core';
-import {
-  phosphorGithubLogoBold,
-  phosphorLinkedinLogoBold,
-  phosphorPaperPlaneTiltBold,
-  phosphorPhoneBold,
-  phosphorMapPinBold,
-  phosphorEnvelopeSimpleBold,
-} from '@ng-icons/phosphor-icons/bold';
+// Angular imports
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
+// Third-party imports
+import { NgIcon, provideIcons } from '@ng-icons/core';
+
+import { getProvidedIcons } from '@app/core/helpers/home-icons.helper';
+import { HomeService } from '../../services/home/home.service';
 @Component({
   selector: 'app-home',
   imports: [NgIcon, RouterLink],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  viewProviders: [
-    provideIcons({
-      phosphorGithubLogoBold,
-      phosphorLinkedinLogoBold,
-      phosphorPaperPlaneTiltBold,
-      phosphorPhoneBold,
-      phosphorMapPinBold,
-      phosphorEnvelopeSimpleBold,
-    }),
-  ],
+  viewProviders: [provideIcons(getProvidedIcons())],
 })
-export class HomeComponent {}
+export class HomeComponent implements OnInit {
+  skills: any = [];
+  projects: any = [];
+  private _homeService = inject(HomeService);
+
+  ngOnInit(): void {
+    this.skills = this._homeService.getSkills() || [];
+    this.projects = this._homeService.getProjects() || [];
+  }
+}

@@ -1,0 +1,51 @@
+import {
+  phosphorGithubLogoBold,
+  phosphorLinkedinLogoBold,
+  phosphorPaperPlaneTiltBold,
+  phosphorPhoneBold,
+  phosphorMapPinBold,
+  phosphorEnvelopeSimpleBold,
+} from '@ng-icons/phosphor-icons/bold';
+import {
+  svglNestjs,
+  svglMongodb,
+  svglSqlServer,
+  svglAzure,
+  svglFirebase,
+  svglGithubDark,
+  svglJavascript,
+  svglMysql,
+  svglNodejs,
+  svglReact,
+  svglPython,
+  svglSupabase,
+  svglCypress,
+  svglCsharp,
+  svglAngular,
+} from '@ng-icons/svgl';
+
+export function getProvidedIcons() {
+  return {
+    phosphorGithubLogoBold,
+    phosphorLinkedinLogoBold,
+    phosphorPaperPlaneTiltBold,
+    phosphorPhoneBold,
+    phosphorMapPinBold,
+    phosphorEnvelopeSimpleBold,
+    svglNestjs,
+    svglMongodb,
+    svglSqlServer,
+    svglAzure,
+    svglFirebase,
+    svglGithubDark,
+    svglJavascript,
+    svglMysql,
+    svglNodejs,
+    svglReact,
+    svglPython,
+    svglSupabase,
+    svglCypress,
+    svglCsharp,
+    svglAngular,
+  };
+}
