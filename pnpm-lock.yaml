@@ -47,6 +47,9 @@ importers:
       '@ng-icons/svgl':
         specifier: ^33.1.0
         version: 33.1.0
+      '@omnedia/ngx-timeline':
+        specifier: ^4.0.1
+        version: 4.0.1(@angular/common@19.2.18(@angular/core@19.2.18(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.18(rxjs@7.8.2)(zone.js@0.15.1))
       '@tailwindcss/postcss':
         specifier: ^4.1.13
         version: 4.1.18
@@ -1562,6 +1565,12 @@ packages:
   '@npmcli/run-script@9.1.0':
     resolution: {integrity: sha512-aoNSbxtkePXUlbZB+anS1LqsJdctG5n3UVhfU47+CDdwMi6uNTBMF9gPcQRnqghQd2FGzcwwIFBruFMxjhBewg==}
     engines: {node: ^18.17.0 || >=20.5.0}
+
+  '@omnedia/ngx-timeline@4.0.1':
+    resolution: {integrity: sha512-J6rHIqit6syla4ZmBaWbCO77eJa96bO2Ozca+C5v2w4OkV8jRX7Z42tJdJwGoe8PO/Jpzir5oCAg4yO1Ci/EpQ==}
+    peerDependencies:
+      '@angular/common': ^21.0.0
+      '@angular/core': ^21.0.0
 
   '@parcel/watcher-android-arm64@2.5.6':
     resolution: {integrity: sha512-YQxSS34tPF/6ZG7r/Ih9xy+kP/WwediEUsqmtf0cuCV5TPPKw/PQHRhueUo6JdeFJaqV3pyjm0GdYjZotbRt/A==}
@@ -6902,6 +6911,12 @@ snapshots:
       which: 5.0.0
     transitivePeerDependencies:
       - supports-color
+
+  '@omnedia/ngx-timeline@4.0.1(@angular/common@19.2.18(@angular/core@19.2.18(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@19.2.18(rxjs@7.8.2)(zone.js@0.15.1))':
+    dependencies:
+      '@angular/common': 19.2.18(@angular/core@19.2.18(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
+      '@angular/core': 19.2.18(rxjs@7.8.2)(zone.js@0.15.1)
+      tslib: 2.8.1
 
   '@parcel/watcher-android-arm64@2.5.6':
     optional: true

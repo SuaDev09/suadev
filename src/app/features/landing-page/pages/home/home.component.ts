@@ -4,12 +4,22 @@ import { RouterLink } from '@angular/router';
 
 // Third-party imports
 import { NgIcon, provideIcons } from '@ng-icons/core';
+import {
+  NgxTimelineComponent,
+  NgxTimelineEntryComponent,
+} from '@omnedia/ngx-timeline';
 
 import { getProvidedIcons } from '@app/core/helpers/home-icons.helper';
 import { HomeService } from '../../services/home/home.service';
 @Component({
   selector: 'app-home',
-  imports: [NgIcon, RouterLink],
+  imports: [
+    NgIcon,
+    RouterLink,
+    NgxTimelineComponent,
+    NgxTimelineEntryComponent,
+  ],
+  standalone: true,
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   viewProviders: [provideIcons(getProvidedIcons())],

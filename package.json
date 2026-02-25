@@ -30,6 +30,7 @@
     "@ng-icons/core": "^33.1.0",
     "@ng-icons/phosphor-icons": "^33.1.0",
     "@ng-icons/svgl": "^33.1.0",
+    "@omnedia/ngx-timeline": "^4.0.1",
     "@tailwindcss/postcss": "^4.1.13",
     "plotly.js-dist-min": "^3.1.0",
     "postcss": "^8.5.6",
